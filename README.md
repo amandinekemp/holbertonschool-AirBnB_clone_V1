@@ -23,7 +23,7 @@
 
 ## ➤ Description:
 
-
+The "AirBnB clone - Web static" project is the first step in building a replica of the AirBnB platform. This phase involves creating a static version of the website. This involves designing and implementing the basic layout and style of the site, using only HTML and CSS. No dynamic or back-end functionality is implemented at this stage. The aim is to create a solid foundation on which to build more complex functionality in later phases of the project.
 
 ----------
 
