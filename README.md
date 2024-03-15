@@ -118,7 +118,7 @@ Layout:
 * You are not allowed to use the style tag in the head tag
 * Use inline styling for all your tags
 
-![medias](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/939d6b9448e63776610d05d2226aa8985209ee4d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0891bb3792eae5d917daaa6c6c1ed7eef99e51ccc1659e08aa4b6cdf886f74d4)
+![medias](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/0.%20Inline%20styling.png)
 
 
 Repo:
@@ -218,7 +218,7 @@ Repo:
 * Directory: web_static
 * File: 3-index.html, styles/3-common.css, styles/3-header.css, styles/3-footer.css, images/
 
-![Zoning done!](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/101096090ff2b87a86083d61789d597774400d5d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d2d8d473cfa75f34fe4b8f78e61b7c6551a8ad297ecf04c9553c258c35b7d146)
+![Zoning done!](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/3.%20Zoning%20done!.png)
 
 Please review your task manually with the following checklist
 
@@ -273,7 +273,7 @@ Layout: (based on 3-index.html)
 
 * 4-index.html won’t be W3C valid, don’t worry, it’s temporary
 
-![Search!](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/0fc91d5d4d62955575dc65a93d9823cf4dc72133.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8a731dfa0b35e9e1476ca2e4e9c7ae0477416af3bc03fc56f6f45f7a73f4df1d)
+![Search!](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/4.%20Search!.png)
 
 Repo:
 
@@ -319,7 +319,7 @@ Layout: (based on 4-index.html)
  * styles/3-footer.css: for the footer style
  * styles/5-filters.css: for the filters style
 
-![More filters](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/63600f1cf5fad5711e6ebba03421fe980d498ec5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=dc865e7bc756c95f27153ad95eafe398be708543b6cf8c2103b18c12083bee1b)
+![More filters](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/5.%20More%20filters.png)
 
 Repo:
 
@@ -362,9 +362,9 @@ Requirements:
  * styles/3-footer.css: for the footer style
  * styles/6-filters.css: for the filters style
 
- ![It's (h)over(1)](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/2fc49432137a0f660dedf3fd4b3d86449a72bc53.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a229ac05b38c64ba0020cebe422cc933cfc739dcce42cc7a49d6cd18b68e13bc)
+ ![It's (h)over(1)](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/6.%20It's%20(h)over(1).png)
  
- ![It's (h)over(2)](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/5aa1d0291e579abd8fc9876af9b9d089147268e2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=38d4171cafeecde9a0d662180bee5414669b0065bdcfed1e481c42ebc69d8ff9)
+ ![It's (h)over(2)](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/6.%20It's%20(h)over(2).png)
 
 Repo:
 
@@ -412,6 +412,8 @@ Requirements:
  * styles/3-footer.css: for footer style
  * styles/6-filters.css: for the filters style
  * styles/7-places.css: for the places style
+
+ ![](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/5.%20More%20filters.png)
 
 
 Repo:
@@ -488,7 +490,7 @@ Requirements:
  * styles/6-filters.css: for the filters style
  * styles/8-places.css: for the places style
 
- ![More details](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/f47a405fccad371100ff9665dae9b3a84a471e62.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=165e5c3c4dcbdeb49f9e8abb13b75c458063654937d191cec6c837a797867b65)
+ ![More details](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/images/8.%20More%20details.png)
 
 
 Repo:
