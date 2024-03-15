@@ -1,856 +1,507 @@
-### holbertonschool-AirBnB_clone
+### AirBnB clone - Web static
 
 <p align="center">
-    <img [AirBnB clone - The console] src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/AirBnB_clone-The_console.png?raw=true">
+    <img [AirBnB clone - Web static] src="">
 </p>
 
 ----------
 
-# <p align="center">AirBnB clone - The console</p>
+# <p align="center">AirBnB clone - Web static</p>
 
 ----------
 
 ## ➤ Menu:
 
-* [➤ Description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-description)
-* [➤ Console](https://github.com/Khadaassi/holbertonschool-AirBnB_clone?tab=readme-ov-file#-console)
-  * [➤ Install](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-install)
-  * [➤ Execute](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-execute)
-* [➤ Files description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-files-description)
-* [➤ Tests](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-tests)
-* [➤ Commands](https://github.com/Khadaassi/holbertonschool-AirBnB_clone?tab=readme-ov-file#-commands)
-* [➤ Resources](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-resources)
-* [➤ General](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-general)
-* [➤ Requirements](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-requirements)
-* [➤ Authors](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-author)
-* [➤ License](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-license)
+* [➤ Description]()
+* [➤ Console]()
+  * [➤ Install]()
+  * [➤ Execute]()
+* [➤ Files description]()
+* [➤ Tests]()
+* [➤ Commands]()
+* [➤ Resources]()
+* [➤ General]()
+* [➤ Requirements]()
+* [➤ Authors]()
+* [➤ License]()
 
 ----------
 
 ## ➤ Description:
 
-The aim of this project was to design a Python console for importing data in JSON format, for subsequent use with a SQL database. The console is capable of creating, updating, deleting and similar operations on this data. This system will be essential for future website development and operation.
+
 
 ----------
-
-## ➤ Console:
-
- ➤ If you want to use our the console AirBnB clone :
-
-### ➤ Install:
-To use our the console AirBnB clone you can clone this repository:<br>
-
-```git@github.com:Khadaassi/holbertonschool-AirBnB_clone.git```
-
-### ➤ Execute:
-To run our the console AirBnB clone:<br>
-
-  ```$ ./console.py```
-
-----------
-
-## ➤ Files description:
-
-| Filename | Description | 
-| -------- | -------- |
-| [amenity.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/amenity.py)    |  This code defines an `Amenity` class which inherits from `BaseModel`. The `Amenity` class represents an amenity or feature that is associated with a place to stay in an application like AirBnB. For example, it could be something like `Wi-Fi` or `Pool`. The `Amenity` class has a single attribute, `name`, which is initialized as an empty string. This attribute is intended to hold the name of the amenity. The `Amenity` class inherits from `BaseModel`, which means it gets all the methods and attributes of this parent class. `BaseModel` is probably a general base class for all models in this application, providing common functionality such as saving to a database or data validation.   |
-| [base_model.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/base_model.py)    |  This code defines a `BaseModel` class, which serves as the base class for the other classes in the "AirBnB clone" project. The `BaseModel` class has a `__init__` method which initializes a new instance of the class. If arguments are passed in dictionary form (`kwargs`), they are used to define the instance's attributes. If the "created_at" or "updated_at" keys are present, their values are converted into `datetime` objects. If no argument is passed, a new unique identifier is generated and the "created_at" and "updated_at" attributes are set to the current time. The `__str__` method returns a string representation of the class instance. The `save` method updates the "updated_at" attribute with the current time and saves the instance in storage. The `to_dict` method returns a dictionary representation of the class instance. Datetime" objects are converted to strings in ISO format.   |
-| [city.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/city.py)    |  This code defines a City class that inherits from BaseModel. The City class represents a city in an application. It could be used to organize accommodations by city. The City class has two attributes, state_id and name. state_id is probably a unique identifier for the state in which the city is located, and name is the name of the city. Both attributes are initialized as empty strings. The City class inherits from BaseModel, which means that it obtains all the methods and attributes of this parent class. BaseModel is probably a general base class for all models in this application, providing common functionality such as database saving or data validation.   |
-| [place.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/place.py)    |  This code defines a `Place` class which inherits from `BaseModel`. The `Place` class represents a place to stay in an application. It will be used to store information about available places to stay. The `Place` class has several attributes: - `city_id`: a unique identifier for the city where the place is located. - `user_id` : a unique identifier for the user who owns or manages the place. - `name`: the name of the location. - `description`: a description of the location. - `number_rooms`: the number of rooms in the location. - `number_bathrooms`: the number of bathrooms in the location. - `max_guest`: the maximum number of guests the location can accommodate. - `price_by_night`: the price per night for renting the venue. - `latitude` and `longitude`: the geographical coordinates of the location. - `amenity_ids`: a list of identifiers for the amenities available in the location. All these attributes are initialized with default values. The `Place` class inherits from `BaseModel`, which means that it obtains all the methods and attributes of this parent class. `BaseModel` is a general base class for all models in this application, providing common functionality such as database saving or data validation.   |
-| [review.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/review.py)    |  This code defines a Review class that inherits from BaseModel. The Review class represents an evaluation in an application. It is used to store user comments on hosting sites. The Review class has three attributes: `place_id`: a unique identifier for the place that has been reviewed. `user_id`: a unique identifier for the user who wrote the review. `text`: the text of the review. These three attributes are initialized as empty strings. The Review class inherits from BaseModel, which means that it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
-| [state.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/state.py)    |  This code defines a State class that inherits from BaseModel. The State class represents a state. It is used to organize hosting locations by state. The State class has a single attribute, name, which is the name of the state. This attribute is initialized as an empty string. The State class inherits from BaseModel, which means it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
-| [user.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/user.py)    |  This code defines a User class that inherits from BaseModel. The User class represents a user in an application. It is used to store information about the application's users. The User class has four attributes: `email`: the user's e-mail address. `password`: the user's password. `first_name`: the user's first name. `last_name`: the user's surname. These four attributes are initialized as empty strings. The User class inherits from BaseModel, which means it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
-
-----------
-
-## ➤ Tests:
-
-**Execution**
-Your shell should work like this in interactive mode:
-
-```python
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit
-$
-```
-
-But also in non-interactive mode: (like the Shell project in C)
-
-```python
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quour shell should work like this in interactive mode:
-
-All your files, classes, functions must be tested with unit tests
-
-```python
-guillaume@ubuntu:~/AirBnB$ python3 -m unittest discover tests
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-
-Note that this is just an example, the number of tests you create can be different from the above example.
-
-**Warning:**
-
-Unit tests must also pass in non-interactive mode:
-
-```python
-guillaume@ubuntu:~/AirBnB$ echo "python3 -m unittest discover tests" | bash
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-
-All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
-
-[console](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240308%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240308T083900Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d4a77e18890125b2990d0ad1bd877b70cb89ab9fb7b8cb808b4ef2735ec49234)
-
-[Video ➤ HBNB- The console](https://youtu.be/p00ES-5K4C8)
-
-----------
-
-## ➤ Commands:
-
-| Commands | Description | Exemple | Output | 
-| -------- | -------- | -------- | -------- |
-| `create`    | Create a new instance	    | create BaseModel    | 53f66ba2-66a3-4e63-816a-dd4b38017fb0    |
-| `show`    | Displays the textual representation of an instance based on the class name and associated identifier.    | show BaseModel 53f66ba2-66a3-4e63-816a-dd4b38017fb0    | [BaseModel] (53f66ba2-66a3-4e63-816a-dd4b38017fb0) {'id': '53f66ba2-66a3-4e63-816a-dd4b38017fb0', 'created_at': datetime.datetime(2024, 3, 8, 10, 40, 17, 384122), 'updated_at': datetime.datetime(2024, 3, 8, 10, 40, 17, 384163)}    |
-| `update`    | Modify a class instance according to a given identifier, using a key-attribute/value pair or an attribute dictionary as input.    | update BaseModel 53f66ba2-66a3-4e63-816a-dd4b38017fb0 email "airbnbclone@airbnbclone.com"   |     |
-| `destroy`    | Deletes an instance using the class name and associated identifier, taking into account their storage in JSON format.    | destroy BaseModel 53f66ba2-66a3-4e63-816a-dd4b38017fb0    |     |
-| `all`    | Displays the textual representation of all instances, whether based on the class name or not.    | all BaseModel	    |     |
-| `help`    | Displays available orders or communicates information    | help BaseModel	    |     |
-| `EOF`    | Exit the console use EOF, tape ctrl-D	    |     |     |
-| `quit`    | Output the prompt    |     |     |
 
 ## ➤ Resources:
 Read or watch:
 
-* [cmd module](https://intranet.hbtn.io/rltoken/_mUwX-Mn69bDBP5iTQmCJA)
-* packages concept page
-* [uuid module](https://intranet.hbtn.io/rltoken/4HNpF8nsTMociNaTgMYAeQ)
-* [datetime](https://intranet.hbtn.io/rltoken/xnmMG0Qin2K9CxXdmQoZkA)
-* [unittest module](https://intranet.hbtn.io/rltoken/MKNUT1FRSdUiGIpwMmrtgw)
-* [args/kwargs](https://intranet.hbtn.io/rltoken/mY-8n8I-ohQIjkUOqcK6Rw)
-* [Python test cheatsheet](https://intranet.hbtn.io/rltoken/9PsyQoeiVNhWGcj_1PkZJg)
+* [Learn to Code HTML & CSS (until “Creating Lists” included)](https://intranet.hbtn.io/rltoken/9P868D9X6hKF-iPeuTjUMA)
+* [Inline Styles in HTML](https://intranet.hbtn.io/rltoken/3w80rVNNceP13m7D52ma3Q)
+* [Specifics on CSS Specificity](https://intranet.hbtn.io/rltoken/miNTDX58opEBx0EbOWPySw)
+* [CSS SpeciFishity](https://intranet.hbtn.io/rltoken/sOpKz-qSh9sD3tEcidcgDw)
+* [Introduction to HTML](https://intranet.hbtn.io/rltoken/Jrc0YlYYAry_aRJBZB5v2Q)
+* [CSS](https://intranet.hbtn.io/rltoken/mq0A1qZJs8J0SE5xyxODzg)
+* [MDN](https://intranet.hbtn.io/rltoken/8AWCJcUwO2UK5FFUb7G-iw)
+* [center boxes](https://intranet.hbtn.io/rltoken/CWYMpBgaImw4SPgfibG2eQ)
 
 ----------
 
 ## ➤ General:
 
-* How to create a Python package
-* How to create a command interpreter in Python using the cmd module
-* What is Unit testing and how to implement it in a large project
-* How to serialize and deserialize a Class
-* How to write and read a JSON file
-* How to manage 'datetime'
-* What is an 'UUID'
-* What is '*args' and how to use it
-* What is '**kwargs' and how to use it
-* How to handle named arguments in a function
+* What is HTML
+* How to create an HTML page
+* What is a markup language
+* What is the DOM
+* What is an element / tag
+* What is an attribute
+* How does the browser load a webpage
+* What is CSS
+* How to add style to an element
+* What is a class
+* What is a selector
+* How to compute CSS Specificity Value
+* What are Box properties in CSS
 
 ----------
 
 ## ➤ Requirements:
 
-**Python Scripts**
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
-* All your files should end with a new line
-* The first line of all your files should be exactly `#!/usr/bin/python3`
-* A `README.md` file, at the root of the folder of the project, is mandatory
-* Your code should use the pycodestyle (version 2.7.*)
-* All your files must be executable
-* The length of your files will be tested using `wc`
-* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
-* All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
-* All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and python3 -c `print(__import__("my_module").MyClass.my_function.__doc__)`)
-* A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+**General**
 
-**Python Unit Tests**
+* Allowed editors: vi, vim, emacs
 * All your files should end with a new line
-* All your test files should be inside a folder `tests`
-* You have to use the [unittest module](https://intranet.hbtn.io/rltoken/MKNUT1FRSdUiGIpwMmrtgw)
-* All your test files should be python files (extension: `.py`)
-* All your test files and folders should start by `test_`
-* Your file organization in the tests folder should be the same as your project
-e.g., For `models/base_model.py`, unit tests must be in: `tests/test_models/test_base_model.py`
-e.g., For `models/user.py`, unit tests must be in: `tests/test_models/test_user.py`
-* All your tests should be executed by using this command: `python3 -m unittest discover tests`
-* You can also test file by file by using this command: `python3 -m unittest tests/test_models/test_base_model.py`
-* All your modules should have a documentation (`python3 -c 'print(__import__("my_module").__doc__)'`)
-* All your classes should have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
-* All your functions (inside and outside a class) should have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)'` and `python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'`)
-* We strongly encourage you to work together on test cases, so that you don’t miss any edge case
+* A README.md file, at the root of the folder of the project, is mandatory
+* Your code should be W3C compliant and validate with W3C-Validator
+* All your CSS files should be in styles folder
+* All your images should be in images folder
+* You are not allowed to use !important and id (#... in the CSS file)
+* You are not allowed to use tags img, embed and iframe
+* You are not allowed to use Javascript
+* Current screenshots have been done on Chrome 56 or more.
+* No cross browsers
+* You have to follow all requirements but some margin/padding are missing - you should try to fit as much as you can to screenshots
+
+**More Info**
+
+![Concepts](https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/concepts/74/hbnb_step1.png)
 
 ----------
 <details>
 <summary> ➤ Tasks:</summary>
 
-### 0. README, AUTHORS
+### 0. Inline styling
 
-* Write a README.md:
- * description of the project
- * description of the command interpreter:
-  * how to start it
-  * how to use it
-  * examples
-* You should have an AUTHORS file at the root of your repository, listing all individuals having contributed content to the repository. For format, reference Docker’s AUTHORS page
-* You should use branches and pull requests on GitHub - it will help you as team to organize your work
+Write an HTML page that displays a header and a footer.
+
+Layout:
+
+* Body:
+ * no margin
+ * no padding
+* Header:
+ * background color #FF0000 (red)
+ * height: 70px
+ * width: 100%
+
+* Footer:
+ * background color #00FF00 (green)
+ * height: 60px
+ * width: 100%
+ * text Holberton School center vertically and horizontally
+ * always at the bottom at the page
+
+* Requirements:
+
+* You must use the header and footer tags
+* You are not allowed to import any files
+* You are not allowed to use the style tag in the head tag
+* Use inline styling for all your tags
+
+![medias](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/939d6b9448e63776610d05d2226aa8985209ee4d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0891bb3792eae5d917daaa6c6c1ed7eef99e51ccc1659e08aa4b6cdf886f74d4)
+
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: README.md, AUTHORS
-
+* Directory: web_static
+* File: 0-index.html
 Please review your task manually with the following checklist
  
-### 1. Be pycodestyle compliant!
+### 1. Head styling
 
-Write beautiful code that passes the pycodestyle checks.
+Write an HTML page that displays a header and a footer by using the style tag in the head tag (same as 0-index.html)
 
-Repo:
+Requirements:
 
-* GitHub repository: holbertonschool-AirBnB_clone
-* File: console.py, models/base_model.py, models/user.py, models/place.py, models/state.py, models/city.py, models/amenity.py, models/review.py, models/engine/file_storage.py
-  
-### 2. Unittests
+* You must use the header and footer tags
+* You are not allowed to import any files
+* No inline styling
+* You must use the style tag in the head tag
 
-All your files, classes, functions must be tested with unit tests
-
-<details>
-<summary>Tests</summary>
-```python
-guillaume@ubuntu:~/AirBnB$ python3 -m unittest discover tests
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-
-</details>
-
-Note that this is just an example, the number of tests you create can be different from the above example.
-
-**Warning:**
-
-Unit tests must also pass in non-interactive mode:
-
-<details>
-<summary>Tests</summary>
-
-```python
-guillaume@ubuntu:~/AirBnB$ echo "python3 -m unittest discover tests" | bash
-...................................................................................
-...................................................................................
-.......................
-----------------------------------------------------------------------
-Ran 189 tests in 13.135s
-
-OK
-guillaume@ubuntu:~/AirBnB$
-```
-
-</details>
+The layout must be exactly the same as 0-index.html
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: tests/
-  
-### 3. BaseModel
+* Directory: web_static
+* File: 1-index.html
 
-Write a class BaseModel that defines all common attributes/methods for other classes:
+Please review your task manually with the following checklist
 
-* models/base_model.py
-* Public instance attributes:
- * id: string - assign with an uuid when an instance is created:
-  * you can use uuid.uuid4() to generate unique id but don’t forget to convert to a string
-  * the goal is to have unique id for each BaseModel
- * created_at: datetime - assign with the current datetime when an instance is created
- * updated_at: datetime - assign with the current datetime when an instance is created and it will be updated every time you change your object
-* __str__: should print: [<class name>] (<self.id>) <self.__dict__>
-* Public instance methods:
- * save(self): updates the public instance attribute updated_at with the current datetime
- * to_dict(self): returns a dictionary containing all keys/values of __dict__ of the instance:
-  * by using self.__dict__, only instance attributes set will be returned
-  * a key __class__ must be added to this dictionary with the class name of the object
-  * created_at and updated_at must be converted to string object in ISO format:
-    * format: %Y-%m-%dT%H:%M:%S.%f (ex: 2017-06-14T22:31:03.285259)
-    * you can use isoformat() of datetime object
-  * This method will be the first piece of the serialization/deserialization process: create a dictionary representation with “simple object type” of our BaseModel
+### 2. CSS files
 
-<details>
-<summary>Tests</summary>
+Write an HTML page that displays a header and a footer by using CSS files (same as 1-index.html)
 
-```python
-guillaume@ubuntu:~/AirBnB$ cat test_base_model.py
-#!/usr/bin/python3
-from models.base_model import BaseModel
+Requirements:
 
-my_model = BaseModel()
-my_model.name = "My First Model"
-my_model.my_number = 89
-print(my_model)
-my_model.save()
-print(my_model)
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
+* You must use the header and footer tags
+* No inline styling
+* You must have 3 CSS files:
+ * styles/2-common.css: for global style (i.e. the body style)
+ * styles/2-header.css: for header style
+ * styles/2-footer.css: for footer style
 
-guillaume@ubuntu:~/AirBnB$ ./test_base_model.py
-[BaseModel] (b6a6e15c-c67d-4312-9a75-9d084935e579) {'my_number': 89, 'name': 'My First Model', 'updated_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119434), 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119427)}
-[BaseModel] (b6a6e15c-c67d-4312-9a75-9d084935e579) {'my_number': 89, 'name': 'My First Model', 'updated_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119572), 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': datetime.datetime(2017, 9, 28, 21, 5, 54, 119427)}
-{'my_number': 89, 'name': 'My First Model', '__class__': 'BaseModel', 'updated_at': '2017-09-28T21:05:54.119572', 'id': 'b6a6e15c-c67d-4312-9a75-9d084935e579', 'created_at': '2017-09-28T21:05:54.119427'}
-JSON of my_model:
-    my_number: (<class 'int'>) - 89
-    name: (<class 'str'>) - My First Model
-    __class__: (<class 'str'>) - BaseModel
-    updated_at: (<class 'str'>) - 2017-09-28T21:05:54.119572
-    id: (<class 'str'>) - b6a6e15c-c67d-4312-9a75-9d084935e579
-    created_at: (<class 'str'>) - 2017-09-28T21:05:54.119427
-guillaume@ubuntu:~/AirBnB$
-```
-
-</details>
+The layout must be exactly the same as 1-index.html
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: models/base_model.py, models/__init__.py, tests/
-  
-### 4. Create BaseModel from dictionary
+* Directory: web_static
+* File: 2-index.html, styles/2-common.css, styles/2-header.css, styles/2-footer.css
 
-Previously we created a method to generate a dictionary representation of an instance (method to_dict()).
+Please review your task manually with the following checklist
 
-Now it’s time to re-create an instance with this dictionary representation.
+### 3. Zoning done!
 
-```python
-<class 'BaseModel'> -> to_dict() -> <class 'dict'> -> <class 'BaseModel'>
-```
+Write an HTML page that displays a header and footer by using CSS files (same as 2-index.html)
 
-Update models/base_model.py:
+Layout:
 
-* __init__(self, *args, **kwargs):
- * you will use *args, **kwargs arguments for the constructor of a BaseModel. (more information inside the AirBnB clone concept page)
- * *args won’t be used
- * if kwargs is not empty:
-  * each key of this dictionary is an attribute name (Note __class__ from kwargs is the only one that should not be added as an attribute. See the example output, below)
-  * each value of this dictionary is the value of this attribute name
-  * Warning: created_at and updated_at are strings in this dictionary, but inside your BaseModel instance is working with datetime object. You have to convert these strings into datetime object. Tip: you know the string format of these datetime
- * otherwise: 
-  * create id and created_at as you did previously (new instance)
+* Common:
+ * no margin
+ * no padding
+ * font color: #484848
+ * font size: 14px
+ * font family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+ * icon in the browser tab
 
-<details>
-<summary>Tests</summary>
+* Header:
+ * background color: white
+ * height: 70px
+ * width: 100%
+ * border bottom 1px #CCCCCC
+ * logo align on left and center vertically (20px space at the left)
 
-```python
-guillaume@ubuntu:~/AirBnB$ cat test_base_model_dict.py
-#!/usr/bin/python3
-from models.base_model import BaseModel
+* Footer:
+ * background color: white
+ * height: 60px
+ * width: 100%
+ * border top 1px #CCCCCC
+ * text Holberton School center vertically and horizontally
+ * always at the bottom at the page
 
-my_model = BaseModel()
-my_model.name = "My_First_Model"
-my_model.my_number = 89
-print(my_model.id)
-print(my_model)
-print(type(my_model.created_at))
-print("--")
-my_model_json = my_model.to_dict()
-print(my_model_json)
-print("JSON of my_model:")
-for key in my_model_json.keys():
-    print("\t{}: ({}) - {}".format(key, type(my_model_json[key]), my_model_json[key]))
+Requirements:
 
-print("--")
-my_new_model = BaseModel(**my_model_json)
-print(my_new_model.id)
-print(my_new_model)
-print(type(my_new_model.created_at))
-
-print("--")
-print(my_model is my_new_model)
-
-guillaume@ubuntu:~/AirBnB$ ./test_base_model_dict.py
-56d43177-cc5f-4d6c-a0c1-e167f8c27337
-[BaseModel] (56d43177-cc5f-4d6c-a0c1-e167f8c27337) {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52298), 'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52302), 'name': 'My_First_Model'}
-<class 'datetime.datetime'>
---
-{'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': '2017-09-28T21:03:54.052298', '__class__': 'BaseModel', 'my_number': 89, 'updated_at': '2017-09-28T21:03:54.052302', 'name': 'My_First_Model'}
-JSON of my_model:
-    id: (<class 'str'>) - 56d43177-cc5f-4d6c-a0c1-e167f8c27337
-    created_at: (<class 'str'>) - 2017-09-28T21:03:54.052298
-    __class__: (<class 'str'>) - BaseModel
-    my_number: (<class 'int'>) - 89
-    updated_at: (<class 'str'>) - 2017-09-28T21:03:54.052302
-    name: (<class 'str'>) - My_First_Model
---
-56d43177-cc5f-4d6c-a0c1-e167f8c27337
-[BaseModel] (56d43177-cc5f-4d6c-a0c1-e167f8c27337) {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337', 'created_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52298), 'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 3, 54, 52302), 'name': 'My_First_Model'}
-<class 'datetime.datetime'>
---
-False
-guillaume@ubuntu:~/AirBnB$
-```
-
-</details>
+* No inline style
+* You are not allowed to use the img tag
+* You are not allowed to use the style tag in the head tag
+* All images must be stored in the images folder
+* You must have 3 CSS files:
+ * styles/3-common.css: for the global style (i.e body style)
+ * styles/3-header.css: for the header style
+ * styles/3-footer.css: for the footer style
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: models/base_model.py, tests/
-  
-### 5. Store first object
+* Directory: web_static
+* File: 3-index.html, styles/3-common.css, styles/3-header.css, styles/3-footer.css, images/
 
-Now we can recreate a BaseModel from another one by using a dictionary representation:
+![Zoning done!](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/101096090ff2b87a86083d61789d597774400d5d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=d2d8d473cfa75f34fe4b8f78e61b7c6551a8ad297ecf04c9553c258c35b7d146)
 
-```python
-<class 'BaseModel'> -> to_dict() -> <class 'dict'> -> <class 'BaseModel'>
-```
+Please review your task manually with the following checklist
 
-It’s great but it’s still not persistent: every time you launch the program, you don’t restore all objects created before… The first way you will see here is to save these objects to a file.
+### 4. Search!
 
-Writing the dictionary representation to a file won’t be relevant:
+Write an HTML page that displays a header, footer and a filters box with a search button.
 
-* Python doesn’t know how to convert a string to a dictionary (easily)
-* It’s not human readable
-* Using this file with another program in Python or other language will be hard.
+Layout: (based on 3-index.html)
 
-So, you will convert the dictionary representation to a JSON string. JSON is a standard representation of a data structure. With this format, humans can read and all programming languages have a JSON reader and writer.
+* Container:
+ * between header and footer tags, add a div:
+  * class name: container
+  * max width 1000px
+  * margin top and bottom 30px - it should be 30px under the bottom of the header (screenshot)
+  * center horizontally
 
-Now the flow of serialization-deserialization will be:
+* Filter section:
+ * tag section
+ * class name filters
+ * inside the .container
+ * background color white
+ * height: 70px
+ * width: 100% of the container
+ * border 1px #DDDDDD with radius 4px
 
-```python
-<class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
-```
+* Button search:
+ * tag button
+ * text Search
+ * inside the section filters
+ * font size: 18px
+ * background color #FF5A5F
+ * text color #FFFFFF
+ * height: 48px
+ * width: 20% of the section filters
+ * no borders
+ * border radius: 4px
+ * center vertically and at 30px of the right border
+ * change opacity to 90% when the mouse is on the button
 
-Magic right?
+* Requirements:
 
-Terms:
+* You must use: header, footer, section, button tags
+* No inline style
+* You are not allowed to use the img tag
+* You are not allowed to use the style tag in the head tag
+* All images must be stored in the images folder
+* You must have 4 CSS files:
+ * styles/4-common.css: for the global style (body and .container styles)
+ * styles/3-header.css: for the header style
+ * styles/3-footer.css: for the footer style
+ * styles/4-filters.css: for the filters style
 
-* simple Python data structure: Dictionaries, arrays, number and string. ex: { '12': { 'numbers': [1, 2, 3], 'name': "John" } }
-* JSON string representation: String representing a simple data structure in JSON format. ex: '{ "12": { "numbers": [1, 2, 3], "name": "John" } }'
+* 4-index.html won’t be W3C valid, don’t worry, it’s temporary
 
-Write a class FileStorage that serializes instances to a JSON file and deserializes JSON file to instances:
-
-* models/engine/file_storage.py
-* Private class attributes:
- * __file_path: string - path to the JSON file (ex: file.json)
- * __objects: dictionary - empty but will store all objects by <class name>.id (ex: to store a BaseModel object with id=12121212, the key will be BaseModel.12121212)
-* Public instance methods:
- * all(self): returns the dictionary __objects
- * new(self, obj): sets in __objects the obj with key <obj class name>.id
- * save(self): serializes __objects to the JSON file (path: __file_path)
- * reload(self): deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ; otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
-
-Update models/__init__.py: to create a unique FileStorage instance for your application
-
-* import file_storage.py
-* create the variable storage, an instance of FileStorage
-* call reload() method on this variable
-
-Update models/base_model.py: to link your BaseModel to FileStorage by using the variable storage
-
-* import the variable storage
-* in the method save(self):
-* call save(self) method of storage
-* __init__(self, *args, **kwargs):
- * if it’s a new instance (not from a dictionary representation), add a call to the method new(self) on storage
-
-<details>
-<summary>Tests</summary>
-
-```python<details>
-<summary>Tests</summary>
-```python<details>
-<summary>Tests</summary>
-```python
-guillaume@ubuntu:~/AirBnB$ cat test_save_reload_base_model.py
-#!/usr/bin/python3
-from models import storage
-from models.base_model import BaseModel
-
-all_objs = storage.all()
-print("-- Reloaded objects --")
-for obj_id in all_objs.keys():
-    obj = all_objs[obj_id]
-    print(obj)
-
-print("-- Create a new object --")
-my_model = BaseModel()
-my_model.name = "My_First_Model"
-my_model.my_number = 89
-my_model.save()
-print(my_model)
-
-guillaume@ubuntu:~/AirBnB$ cat file.json
-cat: file.json: No such file or directory
-guillaume@ubuntu:~/AirBnB$ 
-guillaume@ubuntu:~/AirBnB$ ./test_save_reload_base_model.py
--- Reloaded objects --
--- Create a new object --
-[BaseModel] (ee49c413-023a-4b49-bd28-f2936c95460d) {'my_number': 89, 'updated_at': datetime.datetime(2017, 9, 28, 21, 7, 25, 47381), 'created_at': datetime.datetime(2017, 9, 28, 21, 7, 25, 47372), 'name': 'My_First_Model', 'id': 'ee49c413-023a-4b49-bd28-f2936c95460d'}
-guillaume@ubuntu:~/AirBnB$ 
-guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
-{"BaseModel.ee49c413-023a-4b49-bd28-f2936c95460d": {"my_number": 89, "__class__": "BaseModel", "updated_at": "2017-09-28T21:07:25.047381", "created_at": "2017-09-28T21:07:25.047372", "name": "My_First_Model", "id": "ee49c413-023a-4b49-bd28-f2936c95460d"}}
-guillaume@ubuntu:~/AirBnB$
-guillaume@ubuntu:~/AirBnB$ ./test_save_reload_base_model.py
--- Reloaded objects --
-[BaseModel] (ee49c413-023a-4b49-bd28-f2936c95460d) {'name': 'My_First_Model', 'id': 'ee49c413-023a-4b49-bd28-f2936c95460d', 'updated_at': datetime.datetime(2017, 9, 28, 21, 7, 25, 47381), 'my_number': 89, 'created_at': datetime.datetime(2017, 9, 28, 21, 7, 25, 47372)}
--- Create a new object --
-[BaseModel] (080cce84-c574-4230-b82a-9acb74ad5e8c) {'name': 'My_First_Model', 'id': '080cce84-c574-4230-b82a-9acb74ad5e8c', 'updated_at': datetime.datetime(2017, 9, 28, 21, 7, 51, 973308), 'my_number': 89, 'created_at': datetime.datetime(2017, 9, 28, 21, 7, 51, 973301)}
-guillaume@ubuntu:~/AirBnB$ 
-guillaume@ubuntu:~/AirBnB$ ./test_save_reload_base_model.py
--- Reloaded objects --
-[BaseModel] (080cce84-c574-4230-b82a-9acb74ad5e8c) {'id': '080cce84-c574-4230-b82a-9acb74ad5e8c', 'updated_at': datetime.datetime(2017, 9, 28, 21, 7, 51, 973308), 'created_at': datetime.datetime(2017, 9, 28, 21, 7, 51, 973301), 'name': 'My_First_Model', 'my_number': 89}
-[BaseModel] (ee49c413-023a-4b49-bd28-f2936c95460d) {'id': 'ee49c413-023a-4b49-bd28-f2936c95460d', 'updated_at': datetime.datetime(2017, 9, 28, 21, 7, 25, 47381), 'created_at': datetime.datetime(2017, 9, 28, 21, 7, 25, 47372), 'name': 'My_First_Model', 'my_number': 89}
--- Create a new object --
-[BaseModel] (e79e744a-55d4-45a3-b74a-ca5fae74e0e2) {'id': 'e79e744a-55d4-45a3-b74a-ca5fae74e0e2', 'updated_at': datetime.datetime(2017, 9, 28, 21, 8, 6, 151750), 'created_at': datetime.datetime(2017, 9, 28, 21, 8, 6, 151711), 'name': 'My_First_Model', 'my_number': 89}
-guillaume@ubuntu:~/AirBnB$ 
-guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
-{"BaseModel.e79e744a-55d4-45a3-b74a-ca5fae74e0e2": {"__class__": "BaseModel", "id": "e79e744a-55d4-45a3-b74a-ca5fae74e0e2", "updated_at": "2017-09-28T21:08:06.151750", "created_at": "2017-09-28T21:08:06.151711", "name": "My_First_Model", "my_number": 89}, "BaseModel.080cce84-c574-4230-b82a-9acb74ad5e8c": {"__class__": "BaseModel", "id": "080cce84-c574-4230-b82a-9acb74ad5e8c", "updated_at": "2017-09-28T21:07:51.973308", "created_at": "2017-09-28T21:07:51.973301", "name": "My_First_Model", "my_number": 89}, "BaseModel.ee49c413-023a-4b49-bd28-f2936c95460d": {"__class__": "BaseModel", "id": "ee49c413-023a-4b49-bd28-f2936c95460d", "updated_at": "2017-09-28T21:07:25.047381", "created_at": "2017-09-28T21:07:25.047372", "name": "My_First_Model", "my_number": 89}}
-guillaume@ubuntu:~/AirBnB$
-```
-
-</details>
+![Search!](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/0fc91d5d4d62955575dc65a93d9823cf4dc72133.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=8a731dfa0b35e9e1476ca2e4e9c7ae0477416af3bc03fc56f6f45f7a73f4df1d)
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: models/engine/file_storage.py, models/engine/__init__.py, models/__init__.py, models/base_model.py, tests/
+* Directory: web_static
+* File: 4-index.html, styles/4-common.css, styles/3-header.css, styles/3-footer.css, styles/4-filters.css, images/
 
-### 6. Console 0.0.1
+Please review your task manually with the following checklist
 
-Write a program called console.py that contains the entry point of the command interpreter:
+### 5. More filters
 
-* You must use the module cmd
-* Your class definition must be: class HBNBCommand(cmd.Cmd):
-* Your command interpreter should implement:
- * quit and EOF to exit the program
- * help (this action is provided by default by cmd but you should keep it updated and documented as you work through tasks)
- * a custom prompt: (hbnb)
- * an empty line + ENTER shouldn’t execute anything
-* Your code should not be executed when imported
+Write an HTML page that displays a header, footer and a filters box.
 
-**Warning:**
+Layout: (based on 4-index.html)
 
-You should end your file with:
+* Locations and Amenities filters:
+ * tag: div
+ * classname: locations for location tag and amenities for the other
+ * inside the section filters (same level as the button Search)
+ * height: 100% of the section filters
+ * width: 25% of the section filters
+ * border right #DDDDDD 1px only for the first left filter
+ * contains a title:
+  * tag: h3
+  * font weight: 600
+  * text States or Amenities
+ * contains a subtitle:
+  * tag: h4
+  * font weight: 400
+  * font size: 14px
+  * text with fake contents
 
-```python
-if __name__ == '__main__':
-    HBNBCommand().cmdloop()
-```
+* Requirements:
 
-to make your program executable except when imported. Please don’t add anything around - the Checker won’t like it otherwise
+* You must use: header, footer, section, button, h3, h4 tags
+* No inline style
+* You are not allowed to use the img tag
+* You are not allowed to use the style tag in the head tag
+* All images must be stored in the images folder
+* You must have 4 CSS files:
+ * styles/4-common.css: for the global style (body and .container styles)
+ * styles/3-header.css: for the header style
+ * styles/3-footer.css: for the footer style
+ * styles/5-filters.css: for the filters style
 
-<details>
-<summary>Tests</summary>
-```python
-guillaume@ubuntu:~/AirBnB$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) help quit
-Quit command to exit the program
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit 
-guillaume@ubuntu:~/AirBnB$ 
-```
-
-</details>
-
-**No unittests needed**
+![More filters](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/63600f1cf5fad5711e6ebba03421fe980d498ec5.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=dc865e7bc756c95f27153ad95eafe398be708543b6cf8c2103b18c12083bee1b)
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: console.py
-  
-### 7. Console 0.1
+* Directory: web_static
+* File: 5-index.html, styles/4-common.css, styles/3-header.css, styles/3-footer.css, styles/5-filters.css, images/
 
-Update your command interpreter (console.py) to have these commands:
+Please review your task manually with the following checklist
 
-* create: Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
- * If the class name is missing, print ** class name missing ** (ex: $ create)
- * If the class name doesn’t exist, print ** class doesn't exist ** (ex: $ create MyModel)
-* show: Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234.
- * If the class name is missing, print ** class name missing ** (ex: $ show)
- * If the class name doesn’t exist, print ** class doesn't exist ** (ex: $ show MyModel)
- * If the id is missing, print ** instance id missing ** (ex: $ show BaseModel)
- * If the instance of the class name doesn’t exist for the id, print ** no instance found ** (ex: $ show BaseModel 121212)
-* destroy: Deletes an instance based on the class name and id (save the change into the JSON file). Ex: $ destroy BaseModel 1234-1234-1234.
- * If the class name is missing, print ** class name missing ** (ex: $ destroy)
- * If the class name doesn’t exist, print ** class doesn't exist ** (ex:$ destroy MyModel)
- * If the id is missing, print ** instance id missing ** (ex: $ destroy BaseModel)
- * If the instance of the class name doesn’t exist for the id, print ** no instance found ** (ex: $ destroy BaseModel 121212)
-* all: Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel or $ all.
- * The printed result must be a list of strings (like the example below)
- * If the class name doesn’t exist, print ** class doesn't exist ** (ex: $ all MyModel)
-* update: Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@mail.com".
- * Usage: update <class name> <id> <attribute name> "<attribute value>"
- * Only one attribute can be updated at the time
- * You can assume the attribute name is valid (exists for this model)
- * The attribute value must be casted to the attribute type
- * If the class name is missing, print ** class name missing ** (ex: $ update)
- * If the class name doesn’t exist, print ** class doesn't exist ** (ex: $ update MyModel)
- * If the id is missing, print ** instance id missing ** (ex: $ update BaseModel)
- * If the instance of the class name doesn’t exist for the id, print ** no instance found ** (ex: $ update BaseModel 121212)
- * If the attribute name is missing, print ** attribute name missing ** (ex: $ update BaseModel existing-id)
- * If the value for the attribute name doesn’t exist, print ** value missing ** (ex: $ update BaseModel existing-id first_name)
- * All other arguments should not be used (Ex: $ update BaseModel 1234-1234-1234 email "aibnb@mail.com" first_name "Betty" = $ update BaseModel 1234-1234-1234 email "aibnb@mail.com")
-id, created_at and updated_at cant’ be updated. You can assume they won’t be passed in the update command
- * Only “simple” arguments can be updated: string, integer and float. You can assume nobody will try to update list of ids or datetime
+### 6. It's (h)over
 
-Let’s add some rules:
+Write an HTML page that displays a header, footer and a filters box with dropdown.
 
-* You can assume arguments are always in the right order
-* Each arguments are separated by a space
-* A string argument with a space must be between double quote
-* The error management starts from the first argument to the last one
+Layout: (based on 5-index.html)
 
+* Update Locations and Amenities filters to display a contextual dropdown when the mouse is on the filter div:
+ * tag ul
+ * classname popover
+ * text should be fake now
+ * inside each div
+ * not displayed by default
+ * color #FAFAFA
+ * width same as the div filter
+ * border #DDDDDD 1px with border radius 4px
+ * no list display
+ * Location filter has 2 levels of ul/li:
+  * state -> cities
+  * state name must be display in a h2 tag (font size 16px)
 
-<details>
-<summary>Tests</summary>
+Requirements:
 
-```python
-guillaume@ubuntu:~/AirBnB$ ./console.py
-(hbnb) all MyModel
-** class doesn't exist **
-(hbnb) show BaseModel
-** instance id missing **
-(hbnb) show BaseModel My_First_Model
-** no instance found **
-(hbnb) create BaseModel
-49faff9a-6318-451f-87b6-910505c55907
-(hbnb) all BaseModel
-["[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}"]
-(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
-[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'id': '49faff9a-6318-451f-87b6-910505c55907', 'updated_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903300)}
-(hbnb) destroy
-** class name missing **
-(hbnb) update BaseModel 49faff9a-6318-451f-87b6-910505c55907 first_name "Betty"
-(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
-[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'first_name': 'Betty', 'id': '49faff9a-6318-451f-87b6-910505c55907', 'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'updated_at': datetime.datetime(2017, 10, 2, 3, 11, 3, 49401)}
-(hbnb) create BaseModel
-2dd6ef5c-467c-4f82-9521-a772ea7d84e9
-(hbnb) all BaseModel
-["[BaseModel] (2dd6ef5c-467c-4f82-9521-a772ea7d84e9) {'id': '2dd6ef5c-467c-4f82-9521-a772ea7d84e9', 'created_at': datetime.datetime(2017, 10, 2, 3, 11, 23, 639717), 'updated_at': datetime.datetime(2017, 10, 2, 3, 11, 23, 639724)}", "[BaseModel] (49faff9a-6318-451f-87b6-910505c55907) {'first_name': 'Betty', 'id': '49faff9a-6318-451f-87b6-910505c55907', 'created_at': datetime.datetime(2017, 10, 2, 3, 10, 25, 903293), 'updated_at': datetime.datetime(2017, 10, 2, 3, 11, 3, 49401)}"]
-(hbnb) destroy BaseModel 49faff9a-6318-451f-87b6-910505c55907
-(hbnb) show BaseModel 49faff9a-6318-451f-87b6-910505c55907
-** no instance found **
-(hbnb)
-```
+* You must use: header, footer, section, button, h3, h4, ul, li tags
+* No inline style
+* You are not allowed to use the img tag
+* You are not allowed to use the style tag in the head tag
+* All images must be stored in the images folder
+* You must have 4 CSS files:
+ * styles/4-common.css: for the global style (body and .container styles)
+ * styles/3-header.css: for the header style
+ * styles/3-footer.css: for the footer style
+ * styles/6-filters.css: for the filters style
 
-</details>
-
-**No unittests needed**
-
-Repo:
-
-* GitHub repository: holbertonschool-AirBnB_clone
-* File: console.py
-  
-### 8. First User
-
-Write a class User that inherits from BaseModel:
-
-* models/user.py
-* Public class attributes:
- * email: string - empty string
- * password: string - empty string
- * first_name: string - empty string
- * last_name: string - empty string
-Update FileStorage to manage correctly serialization and deserialization of User.
-
-Update your command interpreter (console.py) to allow show, create, destroy, update and all used with User.
-
-<details>
-<summary>Tests</summary>
-
-```python
-guillaume@ubuntu:~/AirBnB$ cat test_save_reload_user.py
-#!/usr/bin/python3
-from models import storage
-from models.base_model import BaseModel
-from models.user import User
-
-all_objs = storage.all()
-print("-- Reloaded objects --")
-for obj_id in all_objs.keys():
-    obj = all_objs[obj_id]
-    print(obj)
-
-print("-- Create a new User --")
-my_user = User()
-my_user.first_name = "Betty"
-my_user.last_name = "Bar"
-my_user.email = "airbnb@mail.com"
-my_user.password = "root"
-my_user.save()
-print(my_user)
-
-print("-- Create a new User 2 --")
-my_user2 = User()
-my_user2.first_name = "John"
-my_user2.email = "airbnb2@mail.com"
-my_user2.password = "root"
-my_user2.save()
-print(my_user2)
-
-guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
-{"BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"__class__": "BaseModel", "id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "updated_at": "2017-09-28T21:11:14.333862", "created_at": "2017-09-28T21:11:14.333852"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"__class__": "BaseModel", "id": "a42ee380-c959-450e-ad29-c840a898cfce", "updated_at": "2017-09-28T21:11:15.504296", "created_at": "2017-09-28T21:11:15.504287"}, "BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"__class__": "BaseModel", "id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "updated_at": "2017-09-28T21:11:12.971544", "created_at": "2017-09-28T21:11:12.971521"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"__class__": "BaseModel", "id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "updated_at": "2017-09-28T21:11:13.753347", "created_at": "2017-09-28T21:11:13.753337"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"__class__": "BaseModel", "id": "9bf17966-b092-4996-bd33-26a5353cccb4", "updated_at": "2017-09-28T21:11:14.963058", "created_at": "2017-09-28T21:11:14.963049"}}
-guillaume@ubuntu:~/AirBnB$
-guillaume@ubuntu:~/AirBnB$ ./test_save_reload_user.py
--- Reloaded objects --
-[BaseModel] (38a22b25-ae9c-4fa9-9f94-59b3eb51bfba) {'id': '38a22b25-ae9c-4fa9-9f94-59b3eb51bfba', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753337), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753347)}
-[BaseModel] (9bf17966-b092-4996-bd33-26a5353cccb4) {'id': '9bf17966-b092-4996-bd33-26a5353cccb4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963049), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963058)}
-[BaseModel] (2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4) {'id': '2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333852), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333862)}
-[BaseModel] (a42ee380-c959-450e-ad29-c840a898cfce) {'id': 'a42ee380-c959-450e-ad29-c840a898cfce', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504287), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504296)}
-[BaseModel] (af9b4cbd-2ce1-4e6e-8259-f578097dd15f) {'id': 'af9b4cbd-2ce1-4e6e-8259-f578097dd15f', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971521), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971544)}
--- Create a new User --
-[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'email': 'airbnb@mail.com', 'first_name': 'Betty', 'last_name': 'Bar', 'password': 'root'}
--- Create a new User 2 --
-[User] (d0ef8146-4664-4de5-8e89-096d667b728e) {'id': 'd0ef8146-4664-4de5-8e89-096d667b728e', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848280), 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848294), 'email': 'airbnb2@mail.com', 'first_name': 'John', 'password': 'root'}
-guillaume@ubuntu:~/AirBnB$
-guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
-{"BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "updated_at": "2017-09-28T21:11:12.971544", "created_at": "2017-09-28T21:11:12.971521", "__class__": "BaseModel"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "updated_at": "2017-09-28T21:11:13.753347", "created_at": "2017-09-28T21:11:13.753337", "__class__": "BaseModel"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"id": "9bf17966-b092-4996-bd33-26a5353cccb4", "updated_at": "2017-09-28T21:11:14.963058", "created_at": "2017-09-28T21:11:14.963049", "__class__": "BaseModel"}, "BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "updated_at": "2017-09-28T21:11:14.333862", "created_at": "2017-09-28T21:11:14.333852", "__class__": "BaseModel"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"id": "a42ee380-c959-450e-ad29-c840a898cfce", "updated_at": "2017-09-28T21:11:15.504296", "created_at": "2017-09-28T21:11:15.504287", "__class__": "BaseModel"}, "User.38f22813-2753-4d42-b37c-57a17f1e4f88": {"id": "38f22813-2753-4d42-b37c-57a17f1e4f88", "created_at": "2017-09-28T21:11:42.848279", "updated_at": "2017-09-28T21:11:42.848291", "email": "airbnb@mail.com", "first_name": "Betty", "__class__": "User", "last_name": "Bar", "password": "root"}, "User.d0ef8146-4664-4de5-8e89-096d667b728e": {"id": "d0ef8146-4664-4de5-8e89-096d667b728e", "created_at": "2017-09-28T21:11:42.848280", "updated_at": "2017-09-28T21:11:42.848294", "email": "airbnb_2@mail.com", "first_name": "John", "__class__": "User", "password": "root"}}
-guillaume@ubuntu:~/AirBnB$ 
-guillaume@ubuntu:~/AirBnB$ ./test_save_reload_user.py
--- Reloaded objects --
-[BaseModel] (af9b4cbd-2ce1-4e6e-8259-f578097dd15f) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971544), 'id': 'af9b4cbd-2ce1-4e6e-8259-f578097dd15f', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 12, 971521)}
-[BaseModel] (2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333862), 'id': '2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 333852)}
-[BaseModel] (9bf17966-b092-4996-bd33-26a5353cccb4) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963058), 'id': '9bf17966-b092-4996-bd33-26a5353cccb4', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 14, 963049)}
-[BaseModel] (a42ee380-c959-450e-ad29-c840a898cfce) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504296), 'id': 'a42ee380-c959-450e-ad29-c840a898cfce', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 15, 504287)}
-[BaseModel] (38a22b25-ae9c-4fa9-9f94-59b3eb51bfba) {'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753347), 'id': '38a22b25-ae9c-4fa9-9f94-59b3eb51bfba', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 13, 753337)}
-[User] (38f22813-2753-4d42-b37c-57a17f1e4f88) {'password': '63a9f0ea7bb98050796b649e85481845', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848279), 'email': 'airbnb@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848291), 'last_name': 'Bar', 'id': '38f22813-2753-4d42-b37c-57a17f1e4f88', 'first_name': 'Betty'}
-[User] (d0ef8146-4664-4de5-8e89-096d667b728e) {'password': '63a9f0ea7bb98050796b649e85481845', 'created_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848280), 'email': 'airbnb_2@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 11, 42, 848294), 'id': 'd0ef8146-4664-4de5-8e89-096d667b728e', 'first_name': 'John'}
--- Create a new User --
-[User] (246c227a-d5c1-403d-9bc7-6a47bb9f0f68) {'password': 'root', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611352), 'email': 'airbnb@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611363), 'last_name': 'Bar', 'id': '246c227a-d5c1-403d-9bc7-6a47bb9f0f68', 'first_name': 'Betty'}
--- Create a new User 2 --
-[User] (fce12f8a-fdb6-439a-afe8-2881754de71c) {'password': 'root', 'created_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611354), 'email': 'airbnb_2@mail.com', 'updated_at': datetime.datetime(2017, 9, 28, 21, 12, 19, 611368), 'id': 'fce12f8a-fdb6-439a-afe8-2881754de71c', 'first_name': 'John'}
-guillaume@ubuntu:~/AirBnB$
-guillaume@ubuntu:~/AirBnB$ cat file.json ; echo ""
-{"BaseModel.af9b4cbd-2ce1-4e6e-8259-f578097dd15f": {"updated_at": "2017-09-28T21:11:12.971544", "__class__": "BaseModel", "id": "af9b4cbd-2ce1-4e6e-8259-f578097dd15f", "created_at": "2017-09-28T21:11:12.971521"}, "User.38f22813-2753-4d42-b37c-57a17f1e4f88": {"password": "63a9f0ea7bb98050796b649e85481845", "created_at": "2017-09-28T21:11:42.848279", "email": "airbnb@mail.com", "id": "38f22813-2753-4d42-b37c-57a17f1e4f88", "last_name": "Bar", "updated_at": "2017-09-28T21:11:42.848291", "first_name": "Betty", "__class__": "User"}, "User.d0ef8146-4664-4de5-8e89-096d667b728e": {"password": "63a9f0ea7bb98050796b649e85481845", "created_at": "2017-09-28T21:11:42.848280", "email": "airbnb_2@mail.com", "id": "d0ef8146-4664-4de5-8e89-096d667b728e", "updated_at": "2017-09-28T21:11:42.848294", "first_name": "John", "__class__": "User"}, "BaseModel.9bf17966-b092-4996-bd33-26a5353cccb4": {"updated_at": "2017-09-28T21:11:14.963058", "__class__": "BaseModel", "id": "9bf17966-b092-4996-bd33-26a5353cccb4", "created_at": "2017-09-28T21:11:14.963049"}, "BaseModel.a42ee380-c959-450e-ad29-c840a898cfce": {"updated_at": "2017-09-28T21:11:15.504296", "__class__": "BaseModel", "id": "a42ee380-c959-450e-ad29-c840a898cfce", "created_at": "2017-09-28T21:11:15.504287"}, "BaseModel.38a22b25-ae9c-4fa9-9f94-59b3eb51bfba": {"updated_at": "2017-09-28T21:11:13.753347", "__class__": "BaseModel", "id": "38a22b25-ae9c-4fa9-9f94-59b3eb51bfba", "created_at": "2017-09-28T21:11:13.753337"}, "BaseModel.2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4": {"updated_at": "2017-09-28T21:11:14.333862", "__class__": "BaseModel", "id": "2bf3ebfd-a220-49ee-9ae6-b01c75f6f6a4", "created_at": "2017-09-28T21:11:14.333852"}, "User.246c227a-d5c1-403d-9bc7-6a47bb9f0f68": {"password": "root", "created_at": "2017-09-28T21:12:19.611352", "email": "airbnb@mail.com", "id": "246c227a-d5c1-403d-9bc7-6a47bb9f0f68", "last_name": "Bar", "updated_at": "2017-09-28T21:12:19.611363", "first_name": "Betty", "__class__": "User"}, "User.fce12f8a-fdb6-439a-afe8-2881754de71c": {"password": "root", "created_at": "2017-09-28T21:12:19.611354", "email": "airbnb_2@mail.com", "id": "fce12f8a-fdb6-439a-afe8-2881754de71c", "updated_at": "2017-09-28T21:12:19.611368", "first_name": "John", "__class__": "User"}}
-guillaume@ubuntu:~/AirBnB$
-```
-
-</details>
-
-**No unittests needed for the console**
-
-Repo:
-
-* GitHub repository: holbertonschool-AirBnB_clone
-* File: models/user.py, models/engine/file_storage.py, console.py, tests/
+ ![It's (h)over(1)](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/2fc49432137a0f660dedf3fd4b3d86449a72bc53.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a229ac05b38c64ba0020cebe422cc933cfc739dcce42cc7a49d6cd18b68e13bc)
  
-### 9. More classes!
-
-Write all those classes that inherit from BaseModel:
-
-* State (models/state.py):
- * Public class attributes:
-  * name: string - empty string
-* City (models/city.py):
- * Public class attributes:
-  * state_id: string - empty string: it will be the State.id
-  * name: string - empty string
-* Amenity (models/amenity.py):
- * Public class attributes:
-  * name: string - empty string
-* Place (models/place.py):
- * Public class attributes:
-  * city_id: string - empty string: it will be the City.id
-  * user_id: string - empty string: it will be the User.id
-  * name: string - empty string
-  * description: string - empty string
-  * number_rooms: integer - 0
-  * number_bathrooms: integer - 0
-  * max_guest: integer - 0
-  * price_by_night: integer - 0
-  * latitude: float - 0.0
-  * longitude: float - 0.0
-  * amenity_ids: list of string - empty list: it will be the list of Amenity.id later
-* Review (models/review.py):
- * Public class attributes:
-  * place_id: string - empty string: it will be the Place.id
-  * user_id: string - empty string: it will be the User.id
-  * text: string - empty string
+ ![It's (h)over(2)](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/5aa1d0291e579abd8fc9876af9b9d089147268e2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=38d4171cafeecde9a0d662180bee5414669b0065bdcfed1e481c42ebc69d8ff9)
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: models/state.py, models/city.py, models/amenity.py, models/place.py, models/review.py, tests/
-  
-### 10. Console 1.0
+* Directory: web_static
+* File: 6-index.html, styles/4-common.css, styles/3-header.css, styles/3-footer.css, styles/6-filters.css, images/
 
-Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
+Please review your task manually with the following checklist
 
-Update your command interpreter (console.py) to allow those actions: show, create, destroy, update and all with all classes created previously.
+### 7. Display results
 
-Enjoy your first console!
+Write an HTML page that displays a header, footer, a filters box with dropdown and results.
 
-**No unittests needed for the console**
+Layout: (based on 6-index.html)
+
+* Add Places section:
+ * tag: section
+ * classname: places
+ * same level as the filters section, inside .container
+ * contains a title:
+  * tag: h1
+  * text: Places
+  * align in the top left
+  * font size: 30px
+ * contains multiple “Places” as listing (horizontal or vertical) describe by:
+  * tag: article
+  * width: 390px
+  * padding and margin 20px
+  * border #FF5A5F 1px with radius 4px
+  * contains the place name:
+   * tag: h2
+  * font size: 30px
+  * center horizontally
+
+Requirements:
+
+* You must use: header, footer, section, article, button, h1, h2, h3, h4, ul, li tags
+* No inline style
+* You are not allowed to use the img tag
+* You are not allowed to use the style tag in the head tag
+* All images must be stored in the images folder
+* You must have 5 CSS files:
+ * styles/4-common.css: for the global style (i.e. body and .container styles)
+ * styles/3-header.css: for the header style
+ * styles/3-footer.css: for footer style
+ * styles/6-filters.css: for the filters style
+ * styles/7-places.css: for the places style
+
 
 Repo:
 
 * GitHub repository: holbertonschool-AirBnB_clone
-* File: console.py, models/engine/file_storage.py, tests/
+* Directory: web_static
+* File: 7-index.html, styles/4-common.css, styles/3-header.css, styles/3-footer.css, styles/6-filters.css, styles/7-places.css, images/
+
+Please review your task manually with the following checklist
+
+### 8. More details
+
+Write an HTML page that displays a header, a footer, a filter box (dropdown list) and the result of the search.
+
+Layout: (based on 7-index.html)
+
+Add more information to a Place article:
+
+* Price by night:
+ * tag: div
+ * classname: price_by_night
+ * same level as the place name
+ * font color: #FF5A5F
+ * border: #FF5A5F 4px rounded
+ * min width: 60px
+ * height: 60px
+ * font size: 30px
+ * align: the top right (with space)
+
+* Information section:
+ * tag: div
+ * classname: information
+ * height: 80px
+ * border: top and bottom #DDDDDD 1px
+ * contains (align vertically):
+  * Number of guests:
+   * tag: div
+   * classname: max_guest
+   * width: 100px
+   * fake text
+   * icon
+  * Number of bedrooms:
+   * tag: div
+   * classname: number_rooms
+   * width: 100px
+   * fake text
+   * icon
+  * Number of bathrooms:
+   * tag: div
+   * classname: number_bathrooms
+   * width: 100px
+   * fake text
+   * icon
+* User section:
+ * tag: div
+ * classname: user
+ * text Owner: <fake text>
+ * Owner text should be in bold
+* Description section:
+ * tag: div
+ * classname: description
+
+Requirements:
+
+* You must use: header, footer, section, article, button, h1, h2, h3, h4, ul, li tags
+* No inline style
+* You are not allowed to use the img tag
+* You are not allowed to use the style tag in the head tag
+* All images must be stored in the images folder
+* You must have 5 CSS files:
+ * styles/4-common.css: for the global style (i.e. body and .container styles)
+ * styles/3-header.css: for the header style
+ * styles/3-footer.css: for the footer style
+ * styles/6-filters.css: for the filters style
+ * styles/8-places.css: for the places style
+
+ ![More details](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/f47a405fccad371100ff9665dae9b3a84a471e62.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240315%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240315T084513Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=165e5c3c4dcbdeb49f9e8abb13b75c458063654937d191cec6c837a797867b65)
+
+
+Repo:
+
+* GitHub repository: holbertonschool-AirBnB_clone
+* Directory: web_static
+* File: 8-index.html, styles/4-common.css, styles/3-header.css, styles/3-footer.css, styles/6-filters.css, styles/8-places.css, images/
 
 </details>
 
 ----------
 
 ## ➤ Authors:
-
-<p align="center">
-<a href="https://github.com/Khadaassi">
- <img src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/raw/main/logo_github.png?raw=true" />
-</a> 
-<p align="center">Khadija Aassi</p>
 
 <p align="center">
 <a href="https://github.com/amandinekemp">
