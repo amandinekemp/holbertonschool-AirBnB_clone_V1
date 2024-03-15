@@ -1,7 +1,7 @@
 ### AirBnB clone - Web static
 
 <p align="center">
-    <img [AirBnB clone - Web static] src="">
+    <img [AirBnB clone - Web static] src="https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2/blob/main/AirBnB%20clone%20-%20Web%20static.png">
 </p>
 
 ----------
@@ -12,18 +12,12 @@
 
 ## ➤ Menu:
 
-* [➤ Description]()
-* [➤ Console]()
-  * [➤ Install]()
-  * [➤ Execute]()
-* [➤ Files description]()
-* [➤ Tests]()
-* [➤ Commands]()
-* [➤ Resources]()
-* [➤ General]()
-* [➤ Requirements]()
-* [➤ Authors]()
-* [➤ License]()
+* [➤ Description](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2#-description)
+* [➤ Resources](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2#-resources)
+* [➤ General](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2#-general)
+* [➤ Requirements](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2#-requirements)
+* [➤ Authors](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2#-authors)
+* [➤ License](https://github.com/amandinekemp/holbertonschool-AirBnB_clone_V2#-license)
 
 ----------
 
